@@ -46,14 +46,14 @@ export default function Header() {
           className="overflow-hidden w-full md:w-2/4 rounded-3xl bg-white absolute top-8 right-0 md:right-3 px-5 hidden"
         >
           <button
-            className="text-black w-full flex justify-end cursor-pointer font-inter"
+            className="text-black w-full flex justify-end cursor-pointer font-inter mt-5 font-semibold"
             onClick={handleClose}
           >
             close
           </button>
 
           <div className="bg-[#E0EAEB] w-full md:max-w-2/3  h-auto p-2 rounded-2xl mt-10">
-            <h1 className="font-semibold font-inter">Daily Wellness</h1>
+            <h1 className="font-semibold font-inter p-2">Daily Wellness</h1>
 
             <div className="flex justify-between gap-5 p-2">
               <div className="w-52 p-2 bg-white rounded-[10px]">

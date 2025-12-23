@@ -16,6 +16,7 @@ import {
 } from "../component/icons";
 import Slider from "../component/slider";
 import ContactForm from "../component/contactForm";
+import Image from "next/image";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -73,7 +74,7 @@ export default function Home() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: img.current,
-        markers: true,
+
         start: "bottom 90%",
       },
     });
@@ -129,12 +130,15 @@ export default function Home() {
   return (
     <section>
       {/* hero section */}
-      <section className="mx-3 w-auto h-11/12 relative flex items-end rounded-3xl overflow-hidden mt-5 xl:container xl:mx-auto ">
-        <img
+      <section className="mx-3 w-auto h-screen md:h-11/12 relative flex items-end rounded-3xl overflow-hidden mt-5 xl:container xl:mx-auto ">
+        <Image
           src="/jezvok_bg.jpg"
-          className="w-full h-full object-cover md:hidden"
+          alt="Quality medicines built on science and trust"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 1440px"
+          className="object-cover object-center"
           ref={img}
-          alt="image"
         />
         <img
           src="/jezvok_bg_md.jpg"
@@ -188,7 +192,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="mt-10 mx-3 grid grid-cols-2 gap-5 md:hidden">
+      <section className="mt-10 mx-3 flex flex-col sm:grid sm:grid-cols-2 gap-5 md:hidden">
         <div className="bg-[#2E2E2E] p-2 rounded-2xl">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl text-white font-semibold font-inter">
@@ -324,7 +328,8 @@ export default function Home() {
 
         <div className="bg-[#1F3B3F] p-2 flex justify-center text-white">
           <p className="text-[clamp(0.8rem,2vw,1rem)] font-inter">
-            2025 All copyright reserved. Powered by foxvista
+            2025 All copyright reserved. Powered by{" "}
+            <a href="https://foxvista.in/"> foxVista</a>
           </p>
         </div>
       </footer>
