@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+}
+
+/* Global font variables */
+:root {
+  --font-primary: var(--font-inter);
+}
+
+/* Change the color of all dots */
+.swiper-pagination-bullet {
+  background: #cbd5e1 !important; /* Gray-300 */
+  opacity: 1 !important;
+  width: 9px !important;
+  height: 9px !important;
+}
+
+/* Change the color of the active dot */
+.swiper-pagination-bullet-active {
+  background: #2e2e2e !important; /* Blue-500 */
+  width: 30px !important; /* Make it a pill shape */
+  border-radius: 50px !important;
+  transition: width 0.3s ease;
+}
+
+/* Change position of the pagination container */
+.swiper-pagination {
+  bottom: 0px !important;
+}
