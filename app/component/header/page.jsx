@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -43,7 +45,10 @@ export default function Header() {
           ref={dropDown}
           className="overflow-hidden w-full md:w-2/4 rounded-3xl bg-white absolute top-8 right-0 md:right-3 px-5 hidden"
         >
-          <button className="text-black w-full flex justify-end cursor-pointer font-inter" onClick={handleClose}>
+          <button
+            className="text-black w-full flex justify-end cursor-pointer font-inter"
+            onClick={handleClose}
+          >
             close
           </button>
 
@@ -52,12 +57,18 @@ export default function Header() {
 
             <div className="flex justify-between gap-5 p-2">
               <div className="w-52 p-2 bg-white rounded-[10px]">
-                <img src="/med.png" className="w-full h-full object-contain" alt="medicine" />
+                <img
+                  src="/med.png"
+                  className="w-full h-full object-contain"
+                  alt="medicine"
+                />
               </div>
 
               <span>
                 <h1 className="font-semibold font-inter">MAGAJEZ</h1>
-                <p className="text-gray-500 mt-2 font-inter">Supports heart, brain, energy, and skin health.</p>
+                <p className="text-gray-500 mt-2 font-inter">
+                  Supports heart, brain, energy, and skin health.
+                </p>
               </span>
             </div>
           </div>
